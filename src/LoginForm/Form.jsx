@@ -1,7 +1,7 @@
 import UserName from './UserName';
 import Password from './Password';
 import LoginBtn from './LoginBtn';
-import SignUpBtn from './SignupBtn';
+import SignUpBtn from './SignUpBtn';
 import ForgotPassword from './ForgotPassword';
 const Form = () => {
   return (
