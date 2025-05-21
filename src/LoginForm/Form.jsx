@@ -10,6 +10,8 @@ const Form = () => {
   const [pass, setPass] = useState('');
   const handleSubmit = e => {
     e.preventDefault();
+    setUserName('');
+    setPass('');
   };
   return (
     <>
