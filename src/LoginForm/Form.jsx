@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Header from './Header';
 import UserName from './UserName';
 import Password from './Password';
@@ -13,14 +13,7 @@ const Form = () => {
     setUserName('');
     setPass('');
   };
-  useEffect(() => {
-    // const data = [
-    // JSON.parse(localStorage.getItem('username')),
-    // JSON.parse(localStorage.getItem('password')),
-    // ];
-    // console.log(data[0], data[1]);
-    // localStorage.clear();
-  }, []);
+
   return (
     <>
       <form className="container" onSubmit={handleSubmit}>
