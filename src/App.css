@@ -26,65 +26,110 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 90vh;
-  background-color: #f5f6fa;
+  background: linear-gradient(to bottom, #f0faf1, rgba(8, 59, 8, 0.815));
+}
+
+body,
+html {
+  height: 100%;
 }
 .container {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 400px;
-  height: 450px;
+  height: 500px;
   background-color: #fff;
-  box-shadow: 0px 5px 20px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
+  box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.4);
+  border-radius: 3px 50px 3px 50px;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header {
+  top: 0;
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 141px;
+  color: #fff;
+  background-color: #124d00;
+  border-radius: 3px 50px 0px 50px;
+}
+.header .user-icon {
+  font-size: 50px;
+  margin-bottom: 20px;
 }
 .text-container {
   position: relative;
 }
 .text {
   outline: none;
-  margin-bottom: 20px;
   font-size: 14px;
   width: 300px;
   border: 1px solid rgba(0, 0, 139, 0.15);
   border-radius: 4px;
-  padding: 10px 10px;
+  padding: 10px 27px;
   transition: 0.3s;
 }
 .text:focus {
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.55);
 }
+.user {
+  margin-bottom: 20px;
+}
 .input-label {
   position: absolute;
   top: 0;
+  right: 20px;
   color: rgba(0, 0, 0, 0.35);
   pointer-events: none;
   display: flex;
-  padding: 10px 11px;
+  padding: 10px 13px;
   font-size: 14px;
   transition: 0.3s;
 }
-.user:focus ~ label,
-.user:valid ~ label,
-.pass:focus ~ label,
-.pass:valid ~ label,
-textarea:focus ~ label,
-textarea:valid ~ label {
+.user:focus ~ .input-label,
+.user:valid ~ .input-label,
+.pass:focus ~ .input-label,
+.pass:valid ~ .input-label,
+textarea:focus ~ .input-label,
+textarea:valid ~ .input-label {
   top: -10px;
-  right: 1px;
+  right: 0px;
   font-weight: bold;
-  color: #003b6c;
+  color: rgb(8, 88, 1);
   background-color: #fff;
-  padding: 0px 5px;
+  padding: 0px 6px;
   display: flex;
-  border-radius: 50px;
+  border-radius: 5px;
   transition: 0.3s;
   font-size: 12px;
 }
+.label-user-icon {
+  position: absolute;
+  right: 10px;
+  top: 13px;
+  color: rgba(0, 0, 0, 0.35);
+}
+.show-hide-btn {
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  color: rgba(0, 0, 0, 0.35);
+  font-size: 20px;
+  cursor: pointer;
+}
 #login-btn {
-  background-color: #02346d;
+  background-color: #124d00;
   color: #ffffff;
   border: none;
   border-radius: 4px;
@@ -94,6 +139,12 @@ textarea:valid ~ label {
   height: 40px;
   font-size: 17px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-icon {
+  margin-right: 10px;
 }
 button:hover {
   cursor: pointer;
@@ -106,7 +157,7 @@ button:active {
   display: flex;
   justify-content: space-between;
   width: 300px;
-  margin-top: 50px;
+  margin-top: 25px;
   direction: ltr;
 }
 
@@ -120,9 +171,17 @@ button:active {
 .save-pass {
   direction: ltr;
 }
+.signup {
+  display: flex;
+  justify-content: center;
+}
+.signup a {
+  margin-right: 10px;
+}
 a {
   text-decoration: none;
-  margin-left: 10px;
-  font-weight: bold;
-  color: #003b6c;
+  color: #2e9100;
+}
+a:hover {
+  color: #124d00;
 }

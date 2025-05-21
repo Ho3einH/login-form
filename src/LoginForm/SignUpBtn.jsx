@@ -2,8 +2,7 @@ const SignUpBtn = () => {
   return (
     <div>
       <p htmlFor="" className="signup">
-        Don't Sign up yet?
-        <a href="#">Sign Up</a>
+        هنوز حساب کاربری نساخته اید؟ <a href="#">ثبت نام کنید </a>
       </p>
     </div>
   );
