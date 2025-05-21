@@ -14,12 +14,12 @@ const Form = () => {
     setPass('');
   };
   useEffect(() => {
-    const data = [
-      JSON.parse(localStorage.getItem('username')),
-      JSON.parse(localStorage.getItem('password')),
-    ];
-    console.log(data[0], data[1]);
-    localStorage.clear();
+    // const data = [
+    // JSON.parse(localStorage.getItem('username')),
+    // JSON.parse(localStorage.getItem('password')),
+    // ];
+    // console.log(data[0], data[1]);
+    // localStorage.clear();
   }, []);
   return (
     <>
