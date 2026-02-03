@@ -2,15 +2,15 @@
   font-family: IRANSansX;
   font-style: normal;
   font-weight: 400;
-  src: url('fonts/woff/IRANSansX-Regular.woff') format('woff'),
-    url('fonts/woff2/IRANSansX-Regular.woff2') format('woff2');
+  src: url("fonts/woff/IRANSansX-Regular.woff") format("woff"),
+    url("fonts/woff2/IRANSansX-Regular.woff2") format("woff2");
 }
 @font-face {
   font-family: IRANSansX;
   font-style: normal;
   font-weight: 700;
-  src: url('fonts/woff/IRANSansX-Bold.woff') format('woff'),
-    url('fonts/woff2/IRANSansX-Bold.woff2') format('woff2');
+  src: url("fonts/woff/IRANSansX-Bold.woff") format("woff"),
+    url("fonts/woff2/IRANSansX-Bold.woff2") format("woff2");
 }
 
 * {
@@ -26,7 +26,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom, #f0faf1, rgba(8, 59, 8, 0.815));
+  background: #f3f4f6;
 }
 
 body,
@@ -34,20 +34,21 @@ html {
   height: 100%;
   width: 100%;
 }
+
 .container {
   position: relative;
-  top: -50px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  width: 400px;
+  width: 450px;
   height: 400px;
-  background-color: #fff;
+  background: #fff;
   box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.4);
-  border-radius: 3px 50px 3px 50px;
+  border-radius: 0.5rem;
   transition: 0.2s;
 }
+
 .content {
   display: flex;
   position: absolute;
@@ -56,18 +57,18 @@ html {
   justify-content: center;
   align-items: center;
 }
+
 .header {
-  top: 0;
   position: absolute;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  margin: 1rem 0;
   width: 100%;
-  height: 120px;
-  color: #fff;
-  background-color: #124d00;
-  border-radius: 3px 50px 0px 50px;
+  height: 6rem;
+  color: #312e81;
+  border-radius: 0.5rem;
 }
 .header .user-icon {
   font-size: 50px;
@@ -76,30 +77,36 @@ html {
 .text-container {
   position: relative;
 }
+
 .text {
-  outline: none;
+  unicode-bidi: plaintext;
+  direction: ltr;
+  outline: 1px solid #4338ca;
   font-size: 14px;
-  width: 300px;
-  border: 1px solid rgba(0, 0, 139, 0.15);
+  border: 1px solid #d1d5db;
   border-radius: 4px;
-  padding: 10px 27px;
-  transition: 0.3s;
+  padding: 10px 27px 10px 15px;
+  transition: 0.2s;
+  background-color: #fff;
 }
+
 .text:focus {
-  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.55);
+  box-shadow: 0px 0px 5px 2px rgba(67, 56, 202, 0.5);
+  outline: 2px solid #312e81;
 }
 
 .input-label {
   position: absolute;
   top: 0;
   right: 20px;
-  color: rgba(0, 0, 0, 0.35);
+  color: #6b7280;
   pointer-events: none;
   display: flex;
   padding: 10px 13px;
   font-size: 14px;
   transition: 0.3s;
 }
+
 .user:focus ~ .input-label,
 .user:valid ~ .input-label,
 .pass:focus ~ .input-label,
@@ -109,7 +116,6 @@ textarea:valid ~ .input-label {
   top: -10px;
   right: 0px;
   font-weight: bold;
-  color: rgb(8, 88, 1);
   background-color: #fff;
   padding: 0px 6px;
   display: flex;
@@ -123,29 +129,31 @@ textarea:valid ~ .input-label {
   top: 13px;
   color: rgba(0, 0, 0, 0.35);
 }
+
 .show-hide-btn {
   position: absolute;
   top: 12px;
-  left: 15px;
+  left: -35px;
   color: rgba(0, 0, 0, 0.35);
-  font-size: 20px;
+  font-size: 1.55rem;
   cursor: pointer;
   height: 20px;
 }
-.text,
-.input-label,
-.label-user-icon,
-.show-hide-btn {
-  margin: 10px 0;
+
+.input-container {
+  margin: 1.1rem 0;
 }
-#login-btn {
-  background-color: #124d00;
-  color: #ffffff;
+
+.login-icon {
+  margin-right: 10px;
+}
+.btn {
+  /* background-color: #4338ca; */
+  color: #fff;
   border: none;
   border-radius: 4px;
   transition: 0.145s;
   margin: 20px 0;
-  width: 300px;
   height: 40px;
   font-size: 17px;
   cursor: pointer;
@@ -153,50 +161,53 @@ textarea:valid ~ .input-label {
   align-items: center;
   justify-content: center;
 }
-.login-icon {
-  margin-right: 10px;
+
+.btn:hover {
+  background-color: #3730a3;
 }
-button:hover {
-  cursor: pointer;
-  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.55);
+
+.btn:active {
+  background-color: #3730a3;
 }
-button:active {
-  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
-}
-.checkbox-container {
+
+/* .checkbox-container {
   display: flex;
   justify-content: space-between;
   width: 300px;
   margin-top: 25px;
-  direction: ltr;
 }
 
 .checkbox-input,
 .checkbox-label {
   cursor: pointer;
 }
+
 .checkbox-label {
   margin-left: 10px;
 }
+
 .save-pass {
-  direction: ltr;
+  direction: rtl;
 }
+
 .signup {
   display: flex;
   justify-content: center;
 }
+
 .signup a {
   margin-right: 10px;
 }
-a {
+
+.show-hide-btn {
   text-decoration: none;
-  color: #2e9100;
-}
-a:hover {
-  color: #124d00;
 }
 
-@media (max-width: 395px)  {
+.show-hide-btn:hover {
+  color: #4b5563;
+} */
+
+/* @media (max-width: 395px) {
   .container {
     width: 330px;
     height: auto;
@@ -226,12 +237,12 @@ a:hover {
     width: 350px;
     height: auto;
     min-height: 250px;
-    border-radius: 5px 25px 5px 25px ;
-    top:0;
+    border-radius: 5px 25px 5px 25px;
+    top: 0;
   }
   .header {
     display: flex;
-    flex-direction:row ;
+    flex-direction: row;
     height: 70px;
     border-radius: 5px 25px 5px 25px;
   }
@@ -245,3 +256,4 @@ a:hover {
     margin: 4px 0;
   }
 }
+ */
